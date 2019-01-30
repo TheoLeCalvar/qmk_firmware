@@ -31,3 +31,4 @@ You can also disable the rollover, allowing you to use the opposite Shift key to
 |`LSPO_KEY`                    |`KC_9`       |The keycode to send when Left Shift is tapped               |
 |`RSPC_KEY`                    |`KC_0`       |The keycode to send when Right Shift is tapped              |
 |`DISABLE_SPACE_CADET_ROLLOVER`|*Not defined*|If defined, use the opposite Shift key to cancel Space Cadet|
+|`SPACE_CADET_DISABLE_MOD`     |*Not defined*|If defined, shift modifier is removed before sending keycode|

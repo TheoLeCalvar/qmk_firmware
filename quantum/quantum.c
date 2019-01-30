@@ -680,8 +680,14 @@ bool process_record_quantum(keyrecord_t *record) {
           }
         #endif
         if (!shift_interrupted[0] && timer_elapsed(scs_timer[0]) < TAPPING_TERM) {
+          #ifdef SPACE_CADET_DISABLE_MOD
+            unregister_mods(MOD_BIT(KC_LSFT));
+          #endif
           register_code(LSPO_KEY);
           unregister_code(LSPO_KEY);
+          #ifdef SPACE_CADET_DISABLE_MOD
+            register_mods(MOD_BIT(KC_LSFT));
+          #endif
         }
         unregister_mods(MOD_BIT(KC_LSFT));
       }
@@ -702,8 +708,14 @@ bool process_record_quantum(keyrecord_t *record) {
           }
         #endif
         if (!shift_interrupted[1] && timer_elapsed(scs_timer[1]) < TAPPING_TERM) {
+          #ifdef SPACE_CADET_DISABLE_MOD
+            unregister_mods(MOD_BIT(KC_RSFT));
+          #endif
           register_code(RSPC_KEY);
           unregister_code(RSPC_KEY);
+          #ifdef SPACE_CADET_DISABLE_MOD
+            register_mods(MOD_BIT(KC_RSFT));
+          #endif
         }
         unregister_mods(MOD_BIT(KC_RSFT));
       }
